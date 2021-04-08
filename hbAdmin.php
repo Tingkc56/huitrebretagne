@@ -1,14 +1,15 @@
 <?php
 
+require_once('./vendor/autoload.php');
 use Project\Controllers\Back\BackController;
 
 session_start();
-require_once __DIR__ .'/vendor/autoload.php';
 
-require('./vendor/autoload.php');
 
-if($_SERVER['HTTP_HOST'] !="huitre-bretagne.herokuapp.com/hbAdmin.php"){$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();}
+if($_SERVER['HTTP_HOST'] !=  "test-ting-ting.herokuapp.com") {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+}
 
 try{
     $backController = new \Project\Controllers\Back\BackController();
