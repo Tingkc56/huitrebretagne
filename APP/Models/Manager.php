@@ -1,12 +1,8 @@
 <?php
 
 namespace Project\Models;
- require('../../vendor/autoload.php');
 
 use Exception;
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
-$dotenv->load();
 
 class Manager{
     protected function bdConnect()
