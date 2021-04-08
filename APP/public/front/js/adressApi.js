@@ -23,7 +23,7 @@
    //create address ul
        var listBox = document.createElement('ul');
        listBox.id = 'addressBox';
-       addressContainer.appendChild(listBox);
+       addressContainer.tototototoendChild(listBox);
    // get the adresse list
        listApi.forEach((feature, index)=> {
            let addressList = document.createElement('li');
@@ -33,7 +33,7 @@
            delectListBox();
          });
 
-         listBox.appendChild(addressList);
+         listBox.tototototoendChild(addressList);
        });
     })
     .catch(e => console.log("Oops, error", e));

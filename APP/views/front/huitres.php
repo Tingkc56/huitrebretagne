@@ -5,7 +5,7 @@
 <div class="row">
 <?php foreach($huitres as $huitre){?>
         <div class="col-md-3">
-            <div class="product-wrapper mb-45 text-center">
+            <div class="product-wrtototototoer mb-45 text-center">
                 <div class="product-img"> <a href="index.php?action=huitre&id=<?= $huitre['id'] ?>" data-abc="true"> <img class="img-fluid" src="<?=htmlspecialchars($huitre['img']) ?>" alt="<?=htmlspecialchars($huitre['h_name']) ?>"> </a>
                     <div class="product-action">
                         <div class="product-action-style">
