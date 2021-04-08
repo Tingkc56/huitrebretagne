@@ -6,7 +6,7 @@ use Project\Controllers\Back\BackController;
 session_start();
 
 
-if($_SERVER['HTTP_HOST'] !=  "test-ting-ting.herokutototototo.com") {
+if($_SERVER['HTTP_HOST'] !=  "test-ting-ting.herokuapp.com") {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 }

@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Project\\" : "./tototototo"
+            "Project\\" : "./app"
         }
     },
     "require": {
