@@ -8,10 +8,11 @@ use Project\Controllers\Front\FrontController;
 session_start();
 
 
-if($_SERVER['HTTP_HOST'] !=  "test-ting-ting.herokuapp.com") {
+if($_SERVER['HTTP_HOST'] !=  "huitre-bretagne.herokuapp.com") {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 }
+
 
 try{
     $frontController = new FrontController();
@@ -20,19 +21,19 @@ try{
     {
         //各个页面之间的切换，还可以设置变量来切换
         if($_GET['action']=='blog'){
-        $frontController->blog(); 
+            $frontController->blog(); 
         }elseif($_GET['action']=='huitres'){
-        $frontController->huitres(); 
+            $frontController->huitres(); 
         }elseif($_GET['action']=='producers'){
-        $frontController->producers(); 
+            $frontController->producers(); 
         }elseif($_GET['action']=='contact'){
-        $frontController->contact(); 
+            $frontController->contact(); 
         }
         elseif($_GET['action']=='contact'){
-        $frontController->contact(); 
+            $frontController->contact(); 
         }
         elseif($_GET['action']=='connect'){
-        $frontController->connect(); 
+            $frontController->connect(); 
         }
         //关于访问者user的设置
         elseif($_GET['action'] == 'creatUser'){
@@ -86,11 +87,8 @@ try{
             $frontController->producer($id); 
         }
 
-            
-
-
     }else{
-    $frontController->accueil();
+        $frontController->accueil();
     }
     
 } catch(Exception $e){

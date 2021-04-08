@@ -2,6 +2,7 @@
 
 namespace Project\Controllers\Front;
 
+use Project\Models\CommentManager;
 
 class FrontController{
     function accueil(){
@@ -97,7 +98,7 @@ class FrontController{
         $articles = new \Project\Models\ArticleManager();
         $article = $articles->getArticle($id);
 
-        $comments = new \Project\Models\CommentManager();
+        $comments = new CommentManager();
         $articleComments = $comments->getArticleComments($id);
 
         require 'app/views/front/article.php';
