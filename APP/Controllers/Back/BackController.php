@@ -74,7 +74,7 @@ class BackController
             // n'est pas encore utilisé (sera utilisé plus tard)
 
                 // spécifie le chemin du fichier à télécharger
-            $target_file = $path . basename($upfile["name"]);
+            $target_file = $path  . basename($upfile["name"]);
            // var_dump($target_file);
 
 
@@ -165,7 +165,7 @@ class BackController
                     // n'est pas encore utilisé (sera utilisé plus tard)
 
                         // spécifie le chemin du fichier à télécharger
-                    $target_file = $path . basename($upfile["name"]);
+                    $target_file = $path  . basename($upfile["name"]);
                 // var_dump($target_file);
 
 
@@ -328,6 +328,14 @@ class BackController
         header('Location: hbAdmin.php?action=producers');
     }
 
+
+
+
+
+
+
+    
+
     
     function messages(){
         $messages = new MessageManager();
@@ -357,3 +365,4 @@ class BackController
 
 
 }
+        
