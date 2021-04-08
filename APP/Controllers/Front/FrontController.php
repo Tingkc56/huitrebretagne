@@ -5,43 +5,43 @@ namespace Project\Controllers\Front;
 
 class FrontController{
     function accueil(){
-        require 'APP/views/front/accueil.php';
+        require 'app/views/front/accueil.php';
     }
 
     function blog(){
         $articles = new \Project\Models\ArticleManager();
         $allArticles = $articles->getArticles();
-        require 'APP/views/front/blog.php';
+        require 'app/views/front/blog.php';
     }
 
     //get the differents types of huitre
     function huitres(){
         $huitres = new \Project\Models\HuitreManager();
         $huitres = $huitres->getHuitres();
-        require 'APP/views/front/huitres.php';
+        require 'app/views/front/huitres.php';
     }
 
     
     function contact(){
-        require 'APP/views/front/contact.php';
+        require 'app/views/front/contact.php';
     }
 
     function connect(){
-        require 'APP/views/front/connexion.php';
+        require 'app/views/front/connexion.php';
     }
 
     //user connection
     function creatUser($pseudo,$mail,$pass){
         $users = new \Project\Models\UserManager();
         $newUser = $users ->creatUser($pseudo,$mail,$pass);
-        require 'APP/views/front/accueil.php';
+        require 'app/views/front/accueil.php';
        }
 
 
 
        // redirecting to connexion.php
         function contactPage($errors=array()){
-            require 'APP/views/front/connexion.php';
+            require 'app/views/front/connexion.php';
         }
     
        function connexionUser($mail,$pass)
@@ -60,7 +60,7 @@ class FrontController{
                         $_SESSION['pass'] = $result['pass'];
                         $_SESSION['pseudo'] = $result['pseudo'];
 
-                        require 'APP/views/front/accueil.php';
+                        require 'app/views/front/accueil.php';
                 }else{
                     echo 'Le mot de passe est incorrect';
                 }
@@ -73,7 +73,7 @@ class FrontController{
 
        function disConnect(){
         session_unset();
-        require 'APP/views/front/accueil.php';
+        require 'app/views/front/accueil.php';
     }
 
 
@@ -85,9 +85,9 @@ class FrontController{
         if(filter_var($mail,FILTER_VALIDATE_EMAIL)){
             $message = $messageManager ->getMessage($name,$mail,$sujet,$message);
 
-            require 'APP/views/front/confirmMessage.php';
+            require 'app/views/front/confirmMessage.php';
         }else{
-            header('location: APP/views/front/404.php');
+            header('location: app/views/front/404.php');
         }
         
     }
@@ -100,7 +100,7 @@ class FrontController{
         $comments = new \Project\Models\CommentManager();
         $articleComments = $comments->getArticleComments($id);
 
-        require 'APP/views/front/article.php';
+        require 'app/views/front/article.php';
     }
 
     // pour les commentaires des articles
@@ -110,7 +110,7 @@ class FrontController{
         $comment = $commentManager ->getComment($name,$comment,$id);
         var_dump($comment);
 
-            require 'APP/views/front/confirmMessage.php';
+            require 'app/views/front/confirmMessage.php';
     }
 
     // page detail de chaque huitre
@@ -122,21 +122,21 @@ class FrontController{
         $producers = $producers->getHuitreProducer($id);
 
 
-        require 'APP/views/front/huitre.php';
+        require 'app/views/front/huitre.php';
     }
 
     // get producers
     function producers(){
         $producers = new \Project\Models\ProducerManager();
         $producers = $producers->getProducers();
-        require 'APP/views/front/producers.php';
+        require 'app/views/front/producers.php';
     }
 
     //get single producer
     function producer($id){
         $producers = new \Project\Models\ProducerManager();
         $producer = $producers->getProducer($id);
-        require 'APP/views/front/producer.php';
+        require 'app/views/front/producer.php';
     }
 
 

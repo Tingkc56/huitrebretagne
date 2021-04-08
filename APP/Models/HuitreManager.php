@@ -11,14 +11,6 @@ class HuitreManager extends Manager{
         return $newHuitre;
     }
 
-// Front pour afficher les types de huitre
-    // public function getTypeHuitre($id){
-    //     $bdd = $this->bdConnect();
-    //     $req = $bdd->prepare('SELECT * FROM producers WHERE huitre_id=?');
-    //     $req->execute(array($id));
-    //     return $req;
-    // }
-
 //back admin huitres
     public function getHuitres(){
         $bdd = $this->bdConnect();

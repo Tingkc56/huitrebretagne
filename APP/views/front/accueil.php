@@ -3,14 +3,14 @@
 
 <div class="image-accueil">
     <div>
-        <!-- <img class="" src="APP\public\front\images\images\huitre (2).jpg" alt="huitre bretagne"> -->
+        <!-- <img class="" src="app\public\front\images\images\huitre (2).jpg" alt="huitre bretagne"> -->
     </div>
 </div>
 
 <div class="about row" >
     <!-- <div class="photo-about col-6">
-        <img src="APP\public\front\images\images\huitre (11).jpg" alt="huitre bretagne">
-        <img src="APP\public\front\images\images\huitre (14).jpg" alt="huitre bretagne">
+        <img src="app\public\front\images\images\huitre (11).jpg" alt="huitre bretagne">
+        <img src="app\public\front\images\images\huitre (14).jpg" alt="huitre bretagne">
     </div> -->
     <div class="text-about col-6">
         <div class="about-line"></div>
