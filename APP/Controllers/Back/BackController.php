@@ -12,7 +12,7 @@ class BackController
 {
     // gerer la page de connection admin 
     function connexionAdmin(){
-        require 'app/views/back/connexionAdmin.php';
+        require 'APP/views/back/connexionAdmin.php';
     }
 
 
@@ -32,30 +32,30 @@ class BackController
         $_SESSION['name'] = $result['adminname'];
 
         if($isPasswordCorrect){
-            require 'app/views/back/hbtable.php';
+            require 'APP/views/back/hbtable.php';
         }else{
             echo 'Vos identifients sont incorrect';
         }
     }
 
     function accueilAdmin(){
-        require 'app/views/back/hbtable.php';
+        require 'APP/views/back/hbtable.php';
     }
 
     function deconnexion(){
         session_unset();
-        require 'app/views/back/connexionAdmin.php';
+        require 'APP/views/back/connexionAdmin.php';
     }
 
     function articles(){
         $articles = new ArticleManager();
         $allArticles = $articles->getArticles();
 
-        require 'app/views/back/articles.php';
+        require 'APP/views/back/articles.php';
     }
 
     function addArticle(){
-        require 'app/views/back/newArticle.php';
+        require 'APP/views/back/newArticle.php';
     }
 
 
@@ -137,18 +137,18 @@ class BackController
             $articles = new ArticleManager();
             $article = $articles->getArticle($id);
             //var_dump($article);
-            require 'app/views/back/editArticle.php';
+            require 'APP/views/back/editArticle.php';
     }
 
     function huitres(){
         $huitres = new HuitreManager();
         $allHuitres = $huitres->getHuitres();
 
-        require 'app/views/back/huitres.php';
+        require 'APP/views/back/huitres.php';
     }
 
     function addHuitre(){
-        require 'app/views/back/newHuitre.php';
+        require 'APP/views/back/newHuitre.php';
     }
 
     function updateHuitre($id,$nomHuitre,$content,$alt,$target_file)
@@ -222,7 +222,7 @@ class BackController
         $huitres = new HuitreManager();
         $huitre = $huitres->getHuitre($id);
         //var_dump($huitre);
-        require 'app/views/back/editHuitre.php';
+        require 'APP/views/back/editHuitre.php';
 }
 
     function deleteHuitre($id){
@@ -236,14 +236,14 @@ class BackController
         $producers = new ProducerManager();
         $allProducers = $producers->getproducers();
 
-        require 'app/views/back/producers.php';
+        require 'APP/views/back/producers.php';
     }
 
     function addProducer(){
         $huitres = new HuitreManager();
         $allHuitres = $huitres->getHuitres();
         
-        require 'app/views/back/newProducer.php';
+        require 'APP/views/back/newProducer.php';
     }
 
     function updateProducer($id,$nomproducteur,$adresse,$tel,$huitre_n,$content,$alt,$target_file)
@@ -319,7 +319,7 @@ class BackController
         $producers = new ProducerManager();
         $producer = $producers->getProducer($id);
         // var_dump($producer);
-        require 'app/views/back/editproducer.php';
+        require 'APP/views/back/editproducer.php';
     }
 
     function deleteProducer($id){
@@ -340,7 +340,7 @@ class BackController
     function messages(){
         $messages = new MessageManager();
         $messages = $messages->showMessages();
-        require 'app/views/back/messages.php';
+        require 'APP/views/back/messages.php';
 
     }
     function deletMessage($id){
@@ -353,7 +353,7 @@ class BackController
         $comments = new CommentManager();
         $allComments = $comments->showComments();
         // var_dump($allComments);
-        require 'app/views/back/commentaires.php';
+        require 'APP/views/back/commentaires.php';
     }
 
     function deletComment($id){
