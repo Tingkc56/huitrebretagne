@@ -1,6 +1,6 @@
-var burger = document.querySelector('#burger')
-var ul = document.querySelector('.burger-ul')
+var navtoggle = document.querySelector('.navbar-toggler')
+var navcollapse = document.querySelector('#navbarCollapse')
 
-    burger.addEventListener('click',() => {
-        ul.classList.toggle('switch')
+    navtoggle.addEventListener('click',() => {
+    navcollapse.classList.toggle('show')
     })

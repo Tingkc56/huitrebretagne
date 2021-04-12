@@ -1,28 +1,27 @@
 <?php ob_start(); ?>
 <!-- fonction php pour injecter le header -->
 
-<section class="blog">
-            <div class="container">
-                <div class="row">
-                <h1 class="text-center" >Nos producteurs</h1>
-                <?php foreach($producers as $producer){?>
-
-                    <div class="col-lg-4 mb-4">
-                        <article class="card">
-                            <img src="<?=htmlspecialchars($producer['img']) ?>"
-                                alt="<?=htmlspecialchars($producer['p_name']) ?>" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title"><?=htmlspecialchars($producer['p_name']) ?></h5>
-                                <h6>TEL: <?=htmlspecialchars($producer['tel']) ?></h6>
-                                <h6>Adresse : <?=htmlspecialchars($producer['adresse']) ?></h6>
-                                <p class="card-text"><?=htmlspecialchars($producer['p_content']) ?></p>
-                                <a href="index.php?action=producer&id=<?= $producer['id'] ?>" class="btn btn-outline-success btn-sm">Lire plus</a>
-                            </div>
-                        </article>
-                    </div>
-                 <?php } ?>
+<section class="producers">
+    <h1 class="text-center">Nos producteurs</h1>
+    <div class="flex-wrapper">
+        <?php foreach($producers as $producer){?>
+        <div class="flex-1-item-perline-s flex-2-item-perline-m flex-4-item-perline-l">
+            <article class="case">
+                <div class="case-img-container" >
+                    <img class="case-img-top" src="<?=htmlspecialchars($producer['img']) ?>" alt="<?=htmlspecialchars($producer['p_name']) ?>">
+                </div> 
+                <div class="case-body">
+                    <h4 class="case-title"><?=htmlspecialchars($producer['p_name']) ?></h4>
+                    <h5>TEL: <?=htmlspecialchars($producer['tel']) ?></h5>
+                    <h5>Adresse : <?=htmlspecialchars($producer['adresse']) ?></h5>
+                    <p class="case-text"><?=htmlspecialchars($producer['p_content']) ?></p>
+                    <a href="index.php?action=producer&id=<?= $producer['id'] ?>"
+                        class="btn">Lire plus</a>
                 </div>
-            </div>
+            </article>
+        </div>
+        <?php } ?>
+    </div>
 </section>
 
 

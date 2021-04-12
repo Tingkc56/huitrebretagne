@@ -1,0 +1,486 @@
+
+@import "reset";
+@import "variables";
+@import "global";
+
+
+/* 
+---------------------------------------------
+header
+--------------------------------------------- 
+*/
+.navbar-background{
+  border-radius: 0.5%;
+  background-color:rgba(248, 246, 241, 0.88) ;
+  -webkit-border-radius: 0.5%;
+  -moz-border-radius: 0.5%;
+  -ms-border-radius: 0.5%;
+  -o-border-radius: 0.5%;
+}
+
+.navbar-collapse{
+  display: none;
+  font-weight: bolder;
+}
+
+.show{
+  display: flex;
+}
+
+.nav-li{
+    text-align: left;
+}
+
+.nav-a{
+    color: $goldcolor;
+    font-size: 1.5rem;
+}
+
+
+.logo{
+  width: 20vw;
+  display: none;
+}
+
+.text-logo{
+  margin-right: -50px;
+  color: $goldcolor;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+
+.navbar-toggler-icon{
+  color: $goldcolor;
+  font-size: 3rem;
+}
+
+.nav-bottom-line{
+  border: 2px solid $goldcolor;
+  border-right:none;
+  border-left:none;
+  border-bottom:none;
+  margin-bottom: 5%;
+}
+
+/* 
+---------------------------------------------
+footer
+--------------------------------------------- 
+*/
+
+.foot-backgroud{
+  border-radius: 0.5%;
+  background-color:rgba(248, 246, 241, 0.88) ;
+  -webkit-border-radius: 0.5%;
+  -moz-border-radius: 0.5%;
+  -ms-border-radius: 0.5%;
+  -o-border-radius: 0.5%;
+}
+
+.food-top-line{
+  border: 2px solid $goldcolor;
+  border-right:none;
+  border-left:none;
+  border-bottom:none;
+  margin-top: 5%;
+}
+
+.nav-footer{
+  align-items: center;
+  padding:2% 6%;
+  justify-content: space-between;
+}
+
+.footer_top{
+  padding-left: 2%;
+}
+
+.nav-footer a,.nav-footer h4{
+  color: #C2912A;
+}
+
+
+/* 
+---------------------------------------------
+accueil
+--------------------------------------------- 
+*/
+.welcome-image img{
+    width: 100%;
+    height: auto;
+    margin-top: -5%;
+}
+
+
+// type animation
+.welcome{
+  h1{
+    @include title-h1; 
+  }
+  h2 {
+    color: $goldcolor;
+  }
+  p {
+    margin-right: 20%;
+  } 
+ }
+
+/* 
+---------------------------------------------
+huitres
+--------------------------------------------- 
+*/
+.huitre{
+
+}
+
+.product-wrapper,
+.product-img {
+  overflow: hidden;
+  position: relative
+}
+
+.mb-45 {
+  margin-bottom: 45px
+}
+
+.product-action {
+  bottom: -20px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.product-action-style {
+  display: inline-block;
+  padding: 16px 2px 12px;
+  width: 100%;
+}
+
+.product-action-style a {
+  color: $goldcolor;
+  font-weight: bolder;
+  line-height: 1;
+  padding: 0 21px;
+}
+
+/* ------huitre detail page-----*/
+
+ /* ------ huitre-----*/
+ .huitre-page-producors{
+   @media screen and (max-width: 400px) {
+    .huitre-page-producor-info{
+      flex: 0 0 92%;
+      max-width: 92%;
+    }
+   }
+   h3{
+     color: black;
+     font-family: $italicfont;
+   }
+ }
+
+ /* 
+---------------------------------------------
+producteur
+--------------------------------------------- 
+*/
+
+.producers{
+  .btn{
+    @include goldButtom;
+  }
+
+  .btn:hover{
+    background-color: rgba(248, 246, 241, 0.88) ;
+  }
+
+}
+
+/* 
+---------------------------------------------
+blog
+--------------------------------------------- 
+*/
+/* article */
+
+.article {
+padding-top: 4%;
+padding-bottom: 6%;
+border: 1px solid #C2912A;
+border-bottom: none;
+border-right: none;
+border-left: none;
+}
+
+.article h1{
+  color: #C2912A;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 5%;
+}
+
+
+.blog{
+
+  article 
+  {
+    .btn{
+      @include goldButtom;
+    }
+  }
+
+
+  .show{
+  display: block;
+}
+
+.hidden{
+  display: none;
+} 
+}
+
+
+/* 
+---------------------------------------------
+contact
+--------------------------------------------- 
+*/
+
+/* page de contact */
+.contact{
+  width: 50%;
+  padding-top: 4%;
+  padding-bottom: 6%;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+
+.contact h1{
+  color: #C2912A;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 5%;
+}
+
+/* confirmation de contact */
+
+.confirm-message{
+  width: 50%;
+  padding-top: 4%;
+  padding-bottom: 6%;
+  border: 1px solid #C2912A;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+
+/* http://huitrebretagne.test/index.php?action=getMessage */
+
+.confirm-message h1,.confirm-message h2,.confirm-message a{
+  color: #C2912A;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 5%;
+}
+
+.confirm-message button{
+  border-color: #C2912A !important;
+  background-color: #C2912A;
+}
+
+.confirm-message a{
+  font-size: 1.5rem;
+}
+
+
+
+
+/* 
+---------------------------------------------
+connexion
+--------------------------------------------- 
+*/
+.connect{
+  width: 60%;
+  padding-top: 4%;
+  padding-bottom: 6%;
+  border: 1px solid #C2912A;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+
+.connect h1,.connect h3{
+  color: #C2912A;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 5%;
+}
+
+.connect button{
+  margin-top: 5%;
+  border: 1px solid #C2912A;
+
+}
+
+
+
+
+
+/* -@media 2 ------------middle scree----------------------- */
+@media screen and (min-width: 768px) {
+
+/* ------ nav-bar -----*/
+
+.logo{
+  display: block;
+}
+
+.navbar-toggler{
+  display: none;
+}
+
+.navbar-collapse{
+  display: flex;
+
+  .navbar-ul {
+    width: 100%;
+    flex-direction: row;
+    margin-left: 0%;
+    margin-top: 5%;
+    padding-right: 0;
+  }
+
+  .nav-li{
+    text-align: center;
+  }
+  
+}
+
+/* ------ footer-----*/
+
+.nav-footer{
+  padding:2%;
+}
+
+  /* ------ accueil-----*/
+.welcome{
+  h1{
+     width: 13.5em;
+     height: 1.25em;
+     border-right: 1px solid transparent;
+     animation: typing 3.5s steps(35, end), blink-caret .75s step-end infinite;
+     font: bold 3rem $basicfont ;
+     color: $goldcolor;
+     word-break: break-all;
+     overflow: hidden;
+     -webkit-animation: typing 3.5s steps(35, end), blink-caret .75s step-end infinite;
+}
+ @keyframes typing {
+     from {
+        width: 0; 
+     }
+     to { 
+       width: 13.5em;
+     }
+ }
+ @keyframes blink-caret {
+     from, to { border-color: transparent; }
+     50% { border-color: currentColor; }
+
+ }
+}
+
+
+
+
+ /* ------ producer-----*/
+ .producer{
+   h1{
+     margin-bottom: 20%;
+   }
+ }
+
+/* ------ blog-----*/
+
+
+
+}
+
+/* -@media 3  -------big screen------------------ */
+@media screen and (min-width: 992px) {
+  /* ------ navbar-----*/
+
+  .navbar-collapse{
+    flex-basis: 60%;
+  
+    .navbar-ul {
+      margin-left: 5%;
+      margin-top: 0%;
+    }
+  }
+
+    /* ------ accueil-----*/
+  .welcome-image{
+    position: relative;
+    margin-bottom: 5%;
+  }
+
+  .welcome-anim{
+    background-color:rgba(248, 246, 241, 0.85);
+    border-radius: 0.8rem;
+    position: absolute;
+    top:80%  ;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+}
+
+/* ------ blog-----*/
+
+.product-wrapper{
+  border: 5px solid white;
+}
+
+.product-action {
+  bottom: 0px;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  transition: all 0.6s ease 0s;
+  -webkit-transition: all 0.6s ease 0s;
+  -moz-transition: all 0.6s ease 0s;
+  -ms-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+}
+
+.product-action-style {
+  background-color: #fff;
+  opacity: 0.8;
+  box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
+}
+
+.product-action-style a {
+  color: black;
+}
+
+.product-action-style a:hover {
+  color: black;
+}
+
+.product-wrapper:hover .product-action {
+  bottom: 20px;
+  opacity: 1
+}
+
+
+}
+
+/* -@media 3 ----------------max screen -------------------------- */
+
+@media screen and (min-width: 1200px) {
+
+
+}

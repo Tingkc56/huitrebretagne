@@ -1,0 +1,26 @@
+
+/* 
+---------------------------------------------
+styles variables
+--------------------------------------------- 
+*/
+
+// colors
+$goldcolor:rgba(194, 145, 42, 1);
+
+//fonts
+$basicfont:'Cormorant Garamond', serif;
+$italicfont:'Dancing Script', cursive;
+
+
+//mixins
+@mixin title-h1{
+    color: $goldcolor;
+    font: bold 2.5rem $basicfont ;
+    margin-bottom: 0.5rem;
+}
+
+@mixin goldButtom{
+    border: 1px solid $goldcolor;
+    color: $goldcolor;
+}

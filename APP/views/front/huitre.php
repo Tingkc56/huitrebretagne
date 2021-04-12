@@ -1,29 +1,31 @@
 <?php ob_start(); ?>
 <!-- fonction php pour injecter le header -->
-<section class="huitres text-center">
-        <h1 class="text-center"><?= htmlspecialchars($huitre['h_name']) ?></h1>
-        <div class="row">
-                <div class="col-12 ">
-                        <img class="float-left img-fluid" src="<?= htmlspecialchars($huitre['img']) ?>"
+<section class="huitre text-center">
+
+        <div class="article-page">
+                <div class="article-img flex-1-item-perline-s flex-2-item-perline-m">
+                        <img class="img-fluid img-br-10px" src="<?= htmlspecialchars($huitre['img']) ?>"
                                 alt="<?= htmlspecialchars($huitre['alt']) ?>">
                 </div>
-                <p class="col-12 text-huitre"><?= htmlspecialchars($huitre['h_content']) ?></p>
+                <div class="article-body flex-1-item-perline-s flex-2-item-perline-m">
+                <h1 class="text-center"><?= htmlspecialchars($huitre['h_name']) ?></h1>
+                <p class="article-text"><?= htmlspecialchars($huitre['h_content']) ?></p>
                 <h2>Liste de Producteurs</h2>
-                <!-- foreach les producteur qui a le nom de $huitre['id'] -->
-                <div class="row">
+                <!-- foreach producors who get the good huitre id -->
+                <div class="huitre-page-producors flex-wrapper">
                 <?php foreach($producers as $producer){?>
-                        <div class="col-md-4">
-                                <div class="thumbnail">
+                        <div class="huitre-page-producor-info flex-2-item-perline-s flex-2-item-perline-m text-center">
+                                <div >
                                         <a href="index.php?action=producer&id=<?= $producer['id'] ?>">
-                                                <img src="<?= htmlspecialchars($producer['img']) ?>" style="width:100%">
-                                                <div class="caption">
-                                                        <h5><?= htmlspecialchars($producer['p_name']) ?></h5>
+                                                <img class="circular-thumbnail-img" src="<?= htmlspecialchars($producer['img']) ?>">
+                                                <div class="text-center">
+                                                        <h3><?= htmlspecialchars($producer['p_name']) ?></h3>
                                                 </div>
                                         </a>
                                 </div>
                         </div>
                 <?php } ?>
-                </div>
+                </div></div>
         </div>
 </section>
 
